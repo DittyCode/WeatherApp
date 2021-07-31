@@ -1,0 +1,9 @@
+.weather {
+	display: flex;
+	@include flex(column);
+	width: 100%;
+	flex-grow: 1;
+	// background-color: blue;
+	color: white;
+	font-size: 2em;
+}

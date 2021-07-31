@@ -1,5 +1,5 @@
 :root {
-	font-size: 10px;
+	font-size: $font-size;
 }
 *,
 *::before,
@@ -7,4 +7,5 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
 }

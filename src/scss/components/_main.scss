@@ -1,5 +1,15 @@
 .main {
-	// height: 100vh;
+	height: 100vh;
+	display: flex;
+	@include flex(column);
+	background-image: url('./../images/clouds.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	width: 100%;
-	background-color: red;
+	&__title {
+		font-size: 4rem;
+		color: white;
+	}
+	// background-color: red;
 }

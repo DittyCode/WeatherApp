@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const { webpack } = require('webpack');
 
 const settings = {
 	entry: './src/index.js',
@@ -30,11 +29,6 @@ const settings = {
 		}),
 		new HtmlWebpackPlugin({
 			template: './src/index.html',
-		}),
-		new webpack.DefinePlugin({
-			'process.env': {
-				API_KEY: JSON.stringify(process.env.API_KEY),
-			},
 		}),
 	],
 	// optimization: {

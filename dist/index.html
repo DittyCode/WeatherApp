@@ -1,2 +1,51 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>DittyCode | Weather App</title><meta name="description" content="Website where you can check your weather
-		in city"/><meta name="keywords" content="Weather App,js,scss,html,webpack"/><meta name="author" content="DittyCode"/><script defer="defer" src="./app.js"></script><link href="./main.css" rel="stylesheet"></head><body><div class="wrapper"><div class="overlay"><h1 class="overlay__name">DittyCode</h1><p class="overlay__title">Future Frontend Developer</p></div><main class="main"><h2 class="main__title">City</h2><input class="main__input"/></main></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>DittyCode | Weather App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap"
+			rel="stylesheet"
+		/>
+		<meta
+			name="description"
+			content="Website where you can check your weather
+		in city"
+		/>
+		<meta name="keywords" content="Weather App,js,scss,html,webpack" />
+		<meta name="author" content="DittyCode" />
+	<script defer src="./app.js"></script><link href="./main.css" rel="stylesheet"></head>
+	<body>
+		<div class="wrapper">
+			<div class="overlay">
+				<h1 class="overlay__name">DittyCode</h1>
+				<p class="overlay__title">Future Frontend Developer</p>
+			</div>
+			<main class="main">
+				<div class="container">
+					<h2 class="main__title">Weather App</h2>
+					<form class="form">
+						<input
+							type="text"
+							name="city"
+							class="form__input"
+							placeholder="Enter a city name"
+							required
+						/>
+						<button type="submit" class="form__submit">Search</button>
+						<p class="form__error"></p>
+					</form>
+					<div class="weather">
+						<h2 class="weather__title"></h2>
+						<p class="weather__temp"></p>
+						<p class="weather__description"></p>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>

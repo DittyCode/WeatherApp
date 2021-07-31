@@ -1,3 +1,8 @@
+import weatherApi from '../weather/weatherApi';
+
+const title = document.querySelector('.weather__title');
+title.textContent = 'Loading...';
+
 const location = () => {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(currentLocation);
@@ -8,7 +13,7 @@ const location = () => {
 
 const currentLocation = async ({ coords }) => {
 	const { latitude, longitude } = coords;
-	cityApi(latitude, longitude);
+	await cityApi(latitude, longitude);
 };
 
 const cityApi = async (lat, lon) => {
@@ -21,7 +26,9 @@ const cityApi = async (lat, lon) => {
 
 const displayCity = ({ address }) => {
 	const { village } = address;
-	console.log(village);
+
+	weatherApi(village);
+	title.textContent = village;
 };
 
 export { location, currentLocation };

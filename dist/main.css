@@ -1,2 +1,100 @@
-:root{font-size:10px}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}.wrapper{position:relative;min-height:100vh;display:flex;flex-direction:row;align-items:center;justify-content:center}.overlay{position:absolute;top:0;left:0;right:0;height:100%;background-color:yellowgreen;display:flex;flex-direction:column;align-items:center;justify-content:center}.overlay__name{font-size:5.5rem;letter-spacing:3px}.overlay__title{font-size:2.5rem;margin:2em}.main{width:100%;background-color:red}
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/styles.scss ***!
+  \***************************************************************************************************************/
+:root {
+  font-size: 10px; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; }
+  .overlay__name {
+    font-size: 5.5rem;
+    letter-spacing: 3px; }
+  .overlay__title {
+    font-size: 2.5rem;
+    margin: 2em; }
+
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/clouds.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%; }
+  .main__title {
+    font-size: 4rem;
+    color: white; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2em;
+  padding-top: 2em; }
+  .container .form {
+    width: 50%;
+    height: 3rem;
+    margin-top: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .container .form__input {
+      width: 70%;
+      height: 100%;
+      padding-left: 2em;
+      border-radius: 2em;
+      border: none; }
+    .container .form__error {
+      color: red;
+      font-size: 1.1rem;
+      text-transform: uppercase; }
+    .container .form__submit {
+      margin-left: 1em;
+      border-radius: 2em;
+      padding: 0 1em;
+      border: 1px solid black;
+      cursor: pointer; }
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-grow: 1;
+  color: white;
+  font-size: 2em; }
 

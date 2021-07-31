@@ -1,9 +1,16 @@
-import Person from './components/more';
-import { overlay, content } from './components/gsap';
-import { location, currentLocation } from './components/location/location';
+import { overlay } from './components/gsap';
+import initWeather from './components/weather/weather';
+import weatherApi from './components/weather/weatherApi';
 import './scss/styles.scss';
 
-location();
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	const input = e.target.firstElementChild;
+	weatherApi(input.value);
+});
+
+initWeather();
 
 overlay();
-content();

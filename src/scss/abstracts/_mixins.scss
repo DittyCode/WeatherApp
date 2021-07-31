@@ -3,3 +3,8 @@
 	align-items: $align;
 	justify-content: $justify;
 }
+
+@mixin WH($width, $height) {
+	width: $width;
+	height: $height;
+}
