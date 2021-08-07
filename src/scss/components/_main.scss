@@ -1,15 +1,13 @@
 .main {
-	height: 100vh;
 	display: flex;
 	@include flex(column);
+	@include WH(100%, 100vh);
 	background-image: url('./../images/clouds.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	width: 100%;
 	&__title {
 		font-size: 4rem;
-		color: white;
+		color: map-get($colors, primary);
 	}
-	// background-color: red;
 }

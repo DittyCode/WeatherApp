@@ -1,27 +1,37 @@
 .container {
 	display: flex;
 	@include flex(column, center, flex-start);
-	width: 50%;
-	height: 50%;
-	background-color: rgba(0, 0, 0, 0.8);
+	@include WH(50%, 50%);
+	background-color: map-get($colors, containerBGC);
 	border-radius: 2em;
 	padding-top: 2em;
+	@include mq(780px) {
+		width: 70%;
+	}
+	@include mq(500px) {
+		width: 90%;
+	}
 	.form {
-		width: 50%;
-		height: 3rem;
-		margin-top: 1.5em;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		&__input {
+		@include WH(50%, 4vh);
+		margin-top: 1.5em;
+		@include mq(1070px) {
 			width: 70%;
-			height: 100%;
+		}
+		@include mq(415px) {
+			width: 90%;
+			height: 5vh;
+		}
+		&__input {
+			@include WH(70%, 100%);
 			padding-left: 2em;
 			border-radius: 2em;
 			border: none;
 		}
 		&__error {
-			color: red;
+			color: map-get($colors, error);
 			font-size: 1.1rem;
 			text-transform: uppercase;
 		}
@@ -29,7 +39,7 @@
 			margin-left: 1em;
 			border-radius: 2em;
 			padding: 0 1em;
-			border: 1px solid black;
+			border: none;
 			cursor: pointer;
 		}
 	}

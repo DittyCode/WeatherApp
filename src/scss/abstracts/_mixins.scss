@@ -8,3 +8,15 @@
 	width: $width;
 	height: $height;
 }
+
+@mixin positioning($pos, $top, $left) {
+	position: $pos;
+	top: $top;
+	left: $left;
+}
+
+@mixin mq($media) {
+	@media (max-width: $media) {
+		@content;
+	}
+}

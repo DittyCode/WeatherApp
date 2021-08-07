@@ -17,18 +17,20 @@ const currentLocation = async ({ coords }) => {
 };
 
 const cityApi = async (lat, lon) => {
-	const apiKey = 'pk.117e0bda798ba8b322db4e28494b001a';
-	const api = `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${lat}&lon=${lon}&format=json`;
-	const response = await fetch(api);
-	const data = await response.json();
-	await displayCity(data);
+	try {
+		const apiKey = 'pk.117e0bda798ba8b322db4e28494b001a';
+		const api = `https://us1.locationiq.com/v1/reverse.php?key=${apiKey}&lat=${lat}&lon=${lon}&format=json`;
+		const response = await fetch(api);
+		const data = await response.json();
+		await cityWeather(data);
+	} catch (error) {
+		console.log(error);
+	}
 };
 
-const displayCity = ({ address }) => {
+const cityWeather = ({ address }) => {
 	const { village } = address;
-
 	weatherApi(village);
-	title.textContent = village;
 };
 
 export { location, currentLocation };
